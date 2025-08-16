@@ -1,0 +1,48 @@
+
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: verydarkgray;
+    background: brightpink;
+    line-height: 1.6;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8%;
+    background: palevioletred;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: pink;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: deeppink;
+}
+
