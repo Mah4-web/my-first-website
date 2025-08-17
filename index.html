@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whispering Petals</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+<div class="petals">
+    <div class="petal pink"></div>
+    <div class="petal red"></div>
+    <div class="petal yellow"></div>
+    <div class="petal blue"></div>
+    <div class="petal green"></div>
+    <div class="petal pink"></div>
+    <div class="petal red"></div>
+    <div class="petal yellow"></div>
+    <div class="petal blue"></div>
+    <div class="petal green"></div>
+    <div class="petal pink"></div>
+    <div class="petal red"></div>
+</div>
+
+
+
     <header class="header">
         <nav class="container">
     <div class="logo">Wispering <span> Petals</span></div>
@@ -20,11 +38,43 @@
         </ul>
     </div>
     </nav>
+    <audio id="background-music" loop>
+    <source src="happy-kids-background-music-364459.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+    </audio>
+
+    <button class="music-control" id="toggle-music">Play Music</button>
+
+    <script>
+    const music = document.getElementById('background-music');
+    const btn = document.getElementById('toggle-music');
+
+    // Initially paused, so button shows "Play Music"
+    btn.addEventListener('click', () => {
+        if (music.paused) {
+        music.play();
+        btn.textContent = 'Pause Music';
+        } else {
+        music.pause();
+        btn.textContent = 'Play Music';
+        }
+    });
+
+    // Try to autoplay (may be blocked by browser)
+    window.onload = () => {
+        music.play().then(() => {
+        btn.textContent = 'Pause Music';
+        }).catch(() => {
+        btn.textContent = 'Play Music';
+        });
+    };
+    </script>
+
     </header>
     <main>
         <section class="main">
             <div class="container main-text">
-            <h1>Where Blooms Tell <span>Stories</span></h1>
+            <h1>Where Blooms Tell <span>Stories</span> </h1>
             <p> Discover Beautiful Flowers for your Special Days</p>
             </div>
         </section>
@@ -64,6 +114,7 @@
 </div>
 
 </section>
+<!-- music -->
 
 <footer class="footer">
     <div class="container footer-grid">
@@ -109,7 +160,7 @@
 
     <!-- Contact Form -->
     <div class="footer-form">
-        <h4>Quick Contact</h4>
+        <h4>Quick Contact Form</h4>
         <form>
         <input type="text" placeholder="Name" required>
         <input type="email" placeholder="Email" required>
@@ -124,5 +175,7 @@
         </div>
 
 </footer>
+<script src="app.js"></script>
+<button id="back-to-top-btn" title="Back to Top">↑</button>
 </body>
 </html>
