@@ -82,7 +82,7 @@ a {
             left: 0;
             bottom: 0;
             height: 2px;
-            background: #3d8b5f; /* green accent */
+            background: #3d8b5f; 
             transition: width 0.3s ease;
         }
         .header .menu a:hover::after {
@@ -142,12 +142,12 @@ a {
 .gallery h2 {
     font-size: 2.25rem;
     margin-bottom: 1rem;
-  color: #b72a67; /* tulip magenta */
+    color: #b72a67; /* tulip magenta */
 }
 .seasons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .seasons img {
@@ -157,4 +157,54 @@ a {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* occasions */
+.container h2 {
+    text-align:center;
+}
+.occasion-grid {
+    display: flex;
+    justify-content: space-between;  
+    gap: 1.5rem;
+    flex-wrap: nowrap;  
+    width: 100%;      
+}
+
+.occasion-item {
+    flex: 1;                        
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.occasion-item img {
+    width: 100%;
+    height: 288px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.occasion-item:hover img {
+    transform: scale(1.1);
+}
+
+.occasion {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.occasion-item:hover .occasion {
+    background-color: rgba(216, 69, 148, 0.6);
+}
+
+.occasion h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
