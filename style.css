@@ -241,7 +241,20 @@ a {
     width: 20px;
     height: 20px;
 }
+.footer-social .social-icons {
+    display: flex;
+    gap: 1rem;
+}
 
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
 
 .copyright {
             margin-top: 3rem;
